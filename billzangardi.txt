@@ -3,4 +3,4 @@ Hi, I'm Bill Zangardi.
 <p>I majored in Information Science and Technology (IS&T) at Temple University, and graduated May 2015.</p>
 <p>I'm the co-founder of <a href="http://www.rappiddevelopment.com">Rappid Development, LLC</a> and also a mobile software engineer (Android) at Elsevier Inc. in Philadelphia, Pa.</p>
 If you would like to get in touch with me, my email address is: <a href="mailto:bill@rappiddevelopment.com">bill@rappiddevelopment.com</a></p>
-<p>-----> <a href="resume">Click Here to see the rest of my site</a> <-----</p></div>
+<p>--> <a href="resume">Click Here to see the rest of my site</a> <--</p></div>
