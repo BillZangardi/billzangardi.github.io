@@ -1,65 +1,57 @@
 <div class="col-md-6 col-md-offset-3"><span id="a">bill@zangardi</span>:<span id="b">~</span><span id="c">$</span> cat billzangardi.txt<br/><br/>
 Hi, I'm Bill Zangardi.
 <p>I majored in Information Science and Technology (IS&T) at Temple University, and graduated in May 2015.</p>
-<div class="col-lg-2 col-lg-offset-1">
-	<!--WORK DESCRIPTION -->
-
-<div class="row">
 <h5>WORK</h5>
-	</div>
-	<div class="col-lg-6">
-		<p><t>Software Engineer - Android</t><br/>
-			Elsevier Inc. <br/>
-		</p>
-		<p><more>
-			Brought on after finishing my internship, I was assigned to new mobile development team for in-house development of their applications. Currently I am supporting the development of Android applications and maintaining live applications in the Google Play store. I also assist in development of secure backend services for the apps, which contain user preferences and data. <br/>
-			• Working in an agile development with daily Scrum updates<br/>
-			• Using a git environment to maintain code<br/>
+<div>
+	<p><t>Software Engineer - Android</t><br/>
+		Elsevier Inc. <br/>
+	</p>
+	<p><more>
+		Brought on after finishing my internship, I was assigned to new mobile development team for in-house development of their applications. Currently I am supporting the development of Android applications and maintaining live applications in the Google Play store. I also assist in development of secure backend services for the apps, which contain user preferences and data. <br/>
+		• Working in an agile development with daily Scrum updates<br/>
+		• Using a git environment to maintain code<br/>
 
-			Applications and projects I have been a part of:<br/>
-			• BCIM - Business Continuity & Incident Management is an internal application launched on both iOS and Android which employees would install and sign up to receive alerts regarding closings and delays. My role on this project was to create the backend API the application would hit in order to get up to date list of locations and to authenticate users, this was created using NodeJS. I also created CMS for administrators to use to add/remove locations and to send the push notification messages to the users.<br/>
-			• <a href="https://play.google.com/store/apps/details?id=com.elsevier.elseviercp&hl=en">Elsevier Clinical Pharmacology</a> - Application for pharmacists and doctors alike to look up and identify drugs. I was responsible for identifying and resolving bugs before releasing the 2.0 version into the store.<br/>
-			• <a href="https://play.google.com/store/apps/details?id=com.elsevier.cs.ck&hl=en">Clinical Key</a> - A search engine for physicians and nurses. This was the first Android and Agile project I was on from planning to application release. I was 1 of 3 Android developers responsible for creating the screens necessary, and populating these screens with corresponding data returned from the network calls.<br/>
-		</more></p>
-	</div>
-	<div class="col-lg-3">
-		<p><sm>February 2015 - CURRENT</sm></p>
-	</div>
+		Applications and projects I have been a part of:<br/>
+		• BCIM - Business Continuity & Incident Management is an internal application launched on both iOS and Android which employees would install and sign up to receive alerts regarding closings and delays. My role on this project was to create the backend API the application would hit in order to get up to date list of locations and to authenticate users, this was created using NodeJS. I also created CMS for administrators to use to add/remove locations and to send the push notification messages to the users.<br/>
+		• <a href="https://play.google.com/store/apps/details?id=com.elsevier.elseviercp&hl=en">Elsevier Clinical Pharmacology</a> - Application for pharmacists and doctors alike to look up and identify drugs. I was responsible for identifying and resolving bugs before releasing the 2.0 version into the store.<br/>
+		• <a href="https://play.google.com/store/apps/details?id=com.elsevier.cs.ck&hl=en">Clinical Key</a> - A search engine for physicians and nurses. This was the first Android and Agile project I was on from planning to application release. I was 1 of 3 Android developers responsible for creating the screens necessary, and populating these screens with corresponding data returned from the network calls.<br/>
+	</more></p>
+</div>
+<div">
+	<p><sm>February 2015 - CURRENT</sm></p>
+</div>
 
-	<div class="col-lg-6 col-lg-offset-3">
-		<p><t>Co-Founder/Developer</t><br/>
-			Rappid Development, LLC <br/>
-		</p>
-		<p><more>
-		A side business while enrolled in school to expand our knowledge and skills while making a little extra money. We focused on developing websites for clients using NodeJS, Bootstrap, and Wordpress. We delivered secure websites and applications to handle online orders, and encrypted personal data using SSL and third-party clients such as Stripe to handle online credit card payments.
-		</more></p>
-		<p><more>• Develop custom application engines using PHP and Node.<br/>
-		• Formed a joint venture partnership with DryRain Technologies to collaborate on two in-house developed projects.<br/>
-		• Develop custom CMS backends for clients to edit static HTML content.<br/>
-		• Developed and built an API for an iPhone app being released mid 2015<br/>
-		• Resigned August 2015 when starting Full-Time at Elsevier Inc.<br/></more></p>
-	</div>
-	<div class="col-lg-3">
-		<p><sm>NOVEMBER 2013 - AUGUST 2015</sm></p>
-	</div>
+<div>
+	<p><t>Co-Founder/Developer</t><br/>
+		Rappid Development, LLC <br/>
+	</p>
+	<p><more>
+	A side business while enrolled in school to expand our knowledge and skills while making a little extra money. We focused on developing websites for clients using NodeJS, Bootstrap, and Wordpress. We delivered secure websites and applications to handle online orders, and encrypted personal data using SSL and third-party clients such as Stripe to handle online credit card payments.
+	</more></p>
+	<p><more>• Develop custom application engines using PHP and Node.<br/>
+	• Formed a joint venture partnership with DryRain Technologies to collaborate on two in-house developed projects.<br/>
+	• Develop custom CMS backends for clients to edit static HTML content.<br/>
+	• Developed and built an API for an iPhone app being released mid 2015<br/>
+	• Resigned August 2015 when starting Full-Time at Elsevier Inc.<br/></more></p>
+</div>
+<div>
+	<p><sm>NOVEMBER 2013 - AUGUST 2015</sm></p>
+</div>
 
-	<div class="col-lg-6 col-lg-offset-3">
-		<p><t>Software Engineer - Internship</t><br/>
-			Elsevier Inc. <br/>
-		</p>
-		<p><more>
-			Currently working part time while enrolled at Temple University in pursuit of a degree in Information Sciences and Technology, I work as a developer and engineer working on scripts and web pages to make content readily available and ability to be modified using languages such as Java, PHP, MySQL, and backend scripts with Unix such as Shell, bash, and awk. <br/>
-			• Help develop and deploy medical journals into applications for Android and iPhone<br/>
-			• Run systems operations<br/>
-			• Write scripts (Bash, shell, cron, java, etc.) to automate daily tasks<br/>
-		</more></p>
-	</div>
-	<div class="col-lg-3">
-		<p><sm>MAY 2013 - FEBRUARY 2015</sm></p>
-	</div>
-	<br>
-	<hr>
-</div><!--/.container -->
+<div>
+	<p><t>Software Engineer - Internship</t><br/>
+		Elsevier Inc. <br/>
+	</p>
+	<p><more>
+		Currently working part time while enrolled at Temple University in pursuit of a degree in Information Sciences and Technology, I work as a developer and engineer working on scripts and web pages to make content readily available and ability to be modified using languages such as Java, PHP, MySQL, and backend scripts with Unix such as Shell, bash, and awk. <br/>
+		• Help develop and deploy medical journals into applications for Android and iPhone<br/>
+		• Run systems operations<br/>
+		• Write scripts (Bash, shell, cron, java, etc.) to automate daily tasks<br/>
+	</more></p>
+</div>
+<div>
+	<p><sm>MAY 2013 - FEBRUARY 2015</sm></p>
+</div>
 
 
 
