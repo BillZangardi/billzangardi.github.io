@@ -151,11 +151,12 @@ THE SOFTWARE.
 			},
 		 
 			updLstChr:function(){ // blinking cursor
+				var cursorInject = "<div class=\"col-md-6 col-md-offset-3\">|</div>";
 				var cont=this.content(); // get console 
-				if(cont.substring(cont.length-1,cont.length)=="|") // if last char is the cursor
-					$("#console").html($("#console").html().substring(0,cont.length-1)); // remove it
+				if(cont.substring(cont.length-cursorInject.length,cont.length)==cursorInject) // if last char is the cursor
+					$("#console").html($("#console").html().substring(0,cont.length-cursorInject.length)); // remove it
 				else
-					this.write("<div class=\"col-md-6 col-md-offset-3\">|</div>"); // else write it
+					this.write(cursorInject); // else write it
 			}
 		}
 		 
