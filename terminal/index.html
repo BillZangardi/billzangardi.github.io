@@ -155,7 +155,7 @@ THE SOFTWARE.
 				if(cont.substring(cont.length-1,cont.length)=="|") // if last char is the cursor
 					$("#console").html($("#console").html().substring(0,cont.length-1)); // remove it
 				else
-					this.write("|"); // else write it
+					this.write("<div class=\"col-md-6 col-md-offset-3\">|</div>"); // else write it
 			}
 		}
 		 
