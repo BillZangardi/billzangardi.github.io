@@ -12,6 +12,9 @@ description: > # this means to ignore newlines until "baseurl:"
   Bill's Blog
 baseurl: "/blog" # the subpath of your site, e.g. /blog
 url: "http://billzangardi.me/blog" # the base hostname & protocol for your site
+safe: true
+lsi: false
+source: "/"
 twitter_username: biller_lite
 github_username:  billzangardi
 
