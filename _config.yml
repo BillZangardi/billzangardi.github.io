@@ -10,8 +10,7 @@ title: Bill Zangardi - Android Software Engineer
 email: bill.zangardi@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
   Bill Zangardi is a Software Engineer focusing on Android development, currently residing in Philadelphia, Pa. Bill is currently an Android Developer at Elsevier Inc and Rappid Development, LLC.
-baseurl: "/blog" # the subpath of your site, e.g. /blog
-url: "http://billzangardi.me" # the base hostname & protocol for your site
+url: "http://billzangardi.me/blog" # the base hostname & protocol for your site
 twitter_username: biller_lite
 github_username:  billzangardi
 
