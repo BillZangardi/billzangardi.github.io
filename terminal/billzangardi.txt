@@ -5,7 +5,7 @@ Hi, I'm Bill Zangardi.
 <p>Software Engineer - Android<br/>
 	Elsevier Inc. <br/>
 </p>
-<p>FEBRUARY 2015 - CURRENT</p>
+<p>JANUARY 2015 - CURRENT</p>
 <p>
 	Brought on after finishing my internship, I was assigned to new mobile development team for in-house development of their applications. Currently I am supporting the development of Android applications and maintaining live applications in the Google Play store. I also assist in development of secure backend services for the apps, which contain user preferences and data. <br/>
 	• Working in an agile development with daily Scrum updates<br/>
@@ -33,7 +33,7 @@ Hi, I'm Bill Zangardi.
 <p>Software Engineer - Internship<br/>
 	Elsevier Inc. <br/>
 </p>
-<p>MAY 2013 - FEBRUARY 2015</p>
+<p>MAY 2013 - JANUARY 2015</p>
 <p>
 	Currently working part time while enrolled at Temple University in pursuit of a degree in Information Sciences and Technology, I work as a developer and engineer working on scripts and web pages to make content readily available and ability to be modified using languages such as Java, PHP, MySQL, and backend scripts with Unix such as Shell, bash, and awk. <br/>
 	• Help develop and deploy medical journals into applications for Android and iPhone<br/>
