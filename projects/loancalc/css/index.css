@@ -1,0 +1,16 @@
+
+#lineMortgage{
+    
+    display:-webkit-box;
+    -webkit-box-orient:horizontal;
+}
+
+#leftM{
+    -webkit-box-flex: 1;
+}
+
+#rightM{
+    display:-webkit-box;
+    margin-left: 10px;
+    -webkit-box-align: end;
+}
