@@ -88,7 +88,7 @@ function displayTable() {
     document.getElementById('tableRow').style.display = 'block';
     tableShowing = true;
   } else {
-    document.getElementById('tableRow').innerHTML = 'Show Full Table';
+    document.getElementById('tableButton').innerHTML = 'Show Full Table';
     document.getElementById('tableRow').style.display = 'none';
     tableShowing = false;
   }
