@@ -56,27 +56,40 @@ for(var i = 0; i < sets.values.length; i++) {
 }
 
 function displaySets(selectObject) {
+  if(document.getElementById("myPersonalTable").rows.length > 1) {
+    document.getElementById("myPersonalTable").deleteRow(1);
+  }
   var index = selectObject.selectedIndex;
   var buckeye = buckeyeObjects[index];
-  document.getElementById('weight1').textContent = buckeye.weight1;
-  document.getElementById('weight2').textContent = buckeye.weight2;
-  document.getElementById('weight3').textContent = buckeye.weight3;
-  document.getElementById('weight4').textContent = buckeye.weight4;
-  document.getElementById('weight5').textContent = buckeye.weight5;
-  document.getElementById('weight6').textContent = buckeye.weight6;
-  document.getElementById('weight7').textContent = buckeye.weight7;
-
-  document.getElementById('workoutInfo').style.display = 'block';
+  var table = document.getElementById("myPersonalTable");
+  var row = table.insertRow(1);
+  var cell0 = row.insertCell(0);
+  var cell1 = row.insertCell(1);
+  var cell2 = row.insertCell(2);
+  var cell3 = row.insertCell(3);
+  var cell4 = row.insertCell(4);
+  var cell5 = row.insertCell(5);
+  var cell6 = row.insertCell(6);
+  var cell7 = row.insertCell(7);
+  cell0.innerHTML = buckeye.max;
+  cell1.innerHTML = buckeye.weight1;
+  cell2.innerHTML = buckeye.weight2;
+  cell3.innerHTML = buckeye.weight3;
+  cell4.innerHTML = buckeye.weight4;
+  cell5.innerHTML = buckeye.weight5;
+  cell6.innerHTML = buckeye.weight6;
+  cell7.innerHTML = buckeye.weight7;
+  document.getElementById('personalRow').style.display = 'block';
 }
 
 function displayTable() {
   if(!tableShowing) {
     document.getElementById('tableButton').innerHTML = "Hide Table";
-    document.getElementById('myTable').style.display = 'block';
+    document.getElementById('tableRow').style.display = 'block';
     tableShowing = true;
   } else {
-    document.getElementById('tableButton').innerHTML = 'Show Full Table';
-    document.getElementById('myTable').style.display = 'none';
+    document.getElementById('tableRow').innerHTML = 'Show Full Table';
+    document.getElementById('tableRow').style.display = 'none';
     tableShowing = false;
   }
 }
