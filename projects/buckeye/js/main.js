@@ -1,67 +1,111 @@
-window.onload = function() {
-  const MAX = 0;
+var dropdown;
+var tableShowing;
+const MAX = 0;
 
-  var json = '{"values" : [' +
-    '"180 90 105 120 135 150 165 120",' +
-    '"190 95 115 130 145 160 175 130",' +
-    '"200 105 120 140 155 170 185 140",' +
-    '"210 115 130 145 165 180 195 145",' +
-    '"220 125 140 155 170 190 205 155",' +
-    '"230 135 150 165 180 195 215 165",' +
-    '"240 150 165 180 195 210 225 180",' +
-    '"250 155 175 190 205 220 235 190",' +
-    '"260 165 180 200 215 230 245 200",' +
-    '"270 175 190 205 225 240 255 205",' +
-    '"280 185 200 215 230 250 265 215",' +
-    '"290 195 210 225 240 255 275 225",' +
-    '"300 210 225 240 255 270 285 240",' +
-    '"310 215 235 250 265 280 295 250",' +
-    '"320 225 240 260 275 290 305 260",' +
-    '"330 235 250 265 285 300 315 265",' +
-    '"340 245 260 275 290 310 325 275",' +
-    '"350 255 270 285 300 315 335 285",' +
-    '"360 270 285 300 315 330 345 300",' +
-    '"370 275 295 310 325 340 355 310",' +
-    '"380 285 300 320 335 350 365 320",' +
-    '"390 295 310 325 345 360 375 325",' +
-    '"400 305 320 335 350 370 385 335",' +
-    '"410 315 330 345 360 375 395 345",' +
-    '"420 330 345 360 375 390 405 360",' +
-    '"430 335 355 370 385 400 415 370",' +
-    '"440 345 360 380 395 410 425 380",' +
-    '"450 355 370 385 405 420 435 385",' +
-    '"460 365 380 395 410 430 445 395",' +
-    '"470 375 390 405 420 435 455 405",' +
-    '"480 390 405 420 435 450 465 420",' +
-    '"490 395 415 430 445 460 475 430",' +
-    '"500 405 420 440 455 470 485 440"' +
-  ']}';
+var json = '{"values" : [' +
+  '"180 90 105 120 135 150 165 120",' +
+  '"190 95 115 130 145 160 175 130",' +
+  '"200 105 120 140 155 170 185 140",' +
+  '"210 115 130 145 165 180 195 145",' +
+  '"220 125 140 155 170 190 205 155",' +
+  '"230 135 150 165 180 195 215 165",' +
+  '"240 150 165 180 195 210 225 180",' +
+  '"250 155 175 190 205 220 235 190",' +
+  '"260 165 180 200 215 230 245 200",' +
+  '"270 175 190 205 225 240 255 205",' +
+  '"280 185 200 215 230 250 265 215",' +
+  '"290 195 210 225 240 255 275 225",' +
+  '"300 210 225 240 255 270 285 240",' +
+  '"310 215 235 250 265 280 295 250",' +
+  '"320 225 240 260 275 290 305 260",' +
+  '"330 235 250 265 285 300 315 265",' +
+  '"340 245 260 275 290 310 325 275",' +
+  '"350 255 270 285 300 315 335 285",' +
+  '"360 270 285 300 315 330 345 300",' +
+  '"370 275 295 310 325 340 355 310",' +
+  '"380 285 300 320 335 350 365 320",' +
+  '"390 295 310 325 345 360 375 325",' +
+  '"400 305 320 335 350 370 385 335",' +
+  '"410 315 330 345 360 375 395 345",' +
+  '"420 330 345 360 375 390 405 360",' +
+  '"430 335 355 370 385 400 415 370",' +
+  '"440 345 360 380 395 410 425 380",' +
+  '"450 355 370 385 405 420 435 385",' +
+  '"460 365 380 395 410 430 445 395",' +
+  '"470 375 390 405 420 435 455 405",' +
+  '"480 390 405 420 435 450 465 420",' +
+  '"490 395 415 430 445 460 475 430",' +
+  '"500 405 420 440 455 470 485 440"' +
+']}';
+var sets = JSON.parse(json);
+var buckeyeObjects = new Array(sets.values.length);
 
-  var sets = JSON.parse(json);
-  console.log(sets.values + ". " + sets.values.length);
+for(var i = 0; i < sets.values.length; i++) {
+    var obj = sets.values[i];
+    var values = obj.split(' ');
+    buckeyeObjects[i] = {
+      max: values[0], 
+      weight1: values[1], 
+      weight2: values[2], 
+      weight3: values[3], 
+      weight4: values[4], 
+      weight5: values[5], 
+      weight6: values[6], 
+      weight7: values[7]
+    };
+}
 
-  var buckeyeObjects = new Array(sets.values.length);
+function displaySets(selectObject) {
+  var index = selectObject.selectedIndex;
+  var buckeye = buckeyeObjects[index];
+  document.getElementById('weight1').textContent = buckeye.weight1;
+  document.getElementById('weight2').textContent = buckeye.weight2;
+  document.getElementById('weight3').textContent = buckeye.weight3;
+  document.getElementById('weight4').textContent = buckeye.weight4;
+  document.getElementById('weight5').textContent = buckeye.weight5;
+  document.getElementById('weight6').textContent = buckeye.weight6;
+  document.getElementById('weight7').textContent = buckeye.weight7;
 
-  for(var i = 0; i < sets.values.length; i++) {
-      var obj = sets.values[i];
-      var values = obj.split(' ');
-      buckeyeObjects[i] = {
-        max: values[0], 
-        1: values[1], 
-        2: values[2], 
-        3: values[3], 
-        4: values[4], 
-        5: values[5], 
-        6: values[6], 
-        7: values[7]
-      };
+  document.getElementById('workoutInfo').style.display = 'block';
+}
+
+function displayTable() {
+  if(!tableShowing) {
+    document.getElementById('tableButton').innerHTML = "Hide Table";
+    document.getElementById('myTable').style.display = 'block';
+    tableShowing = true;
+  } else {
+    document.getElementById('tableButton').innerHTML = 'Show Full Table';
+    document.getElementById('myTable').style.display = 'none';
+    tableShowing = false;
   }
+}
 
-  var dropdown = document.getElementById("selectNumber");
-  for (var i=0; i < buckeyeObjects.length;++i){    
+window.onload = function() {
+  dropdown = document.getElementById("selectNumber");
+  for (var i=0; i < buckeyeObjects.length;++i){  
+      var buckeye = buckeyeObjects[i];  
       var option = document.createElement("OPTION");
-      option.text = buckeyeObjects[i].max;
-      option.value = buckeyeObjects[i].max;
+      option.text = buckeye.max;
+      option.value = buckeye.max;
       dropdown.options.add(option); 
+      var table = document.getElementById("myTable");
+      var row = table.insertRow(i + 1);
+      var cell0 = row.insertCell(0);
+      var cell1 = row.insertCell(1);
+      var cell2 = row.insertCell(2);
+      var cell3 = row.insertCell(3);
+      var cell4 = row.insertCell(4);
+      var cell5 = row.insertCell(5);
+      var cell6 = row.insertCell(6);
+      var cell7 = row.insertCell(7);
+      cell0.innerHTML = buckeye.max;
+      cell1.innerHTML = buckeye.weight1;
+      cell2.innerHTML = buckeye.weight2;
+      cell3.innerHTML = buckeye.weight3;
+      cell4.innerHTML = buckeye.weight4;
+      cell5.innerHTML = buckeye.weight5;
+      cell6.innerHTML = buckeye.weight6;
+      cell7.innerHTML = buckeye.weight7;
   }
 }
