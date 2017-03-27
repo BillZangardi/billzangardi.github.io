@@ -109,7 +109,7 @@ function displayTable() {
 }
 
 function displayHistoryTable(history) {
-  console.log("displayHistoryTable" + history);
+  console.log("displayHistoryTable: " + history);
   var json = JSON.parse(history);
   for (var i=0; i < json.values.length;++i){  
       var table = document.getElementById("historyTable");
@@ -126,23 +126,23 @@ function remember_workout() {
   var index = dropdown.selectedIndex;
   var buckeye = buckeyeObjects[index];
   var history=getCookie("history");
+  if(history) {
+    var json = JSON.parse(history);
+    json.values.push(newValue);
+  }
   if(history != "") {
     var json = JSON.parse(history);
-    var newValue = '{' +
-      '"weight":"' + buckeye.max + '",' +
-      '"date":"' + new Date() + '"}';
-    var newJson = json.values.push(newValue);
+    var newJson = json.values.push({"weight" : buckeye.max, "date" : new Date()});
     console.log("NEW COOKIE: " + JSON.stringify(newJson));
     setCookie("history", JSON.stringify(newJson), 30);
-    checkCookie();
   } else {
       var cookie = '{"values":[{' +
       '"weight":"' + buckeye.max + '",' +
       '"date":"' + new Date() + '"}]}';
       console.log(cookie);
       setCookie("history", cookie, 30);
-      checkCookie();
   }
+  checkCookie();
 }
 
 window.onload = function() {
