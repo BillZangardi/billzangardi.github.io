@@ -109,8 +109,8 @@ function displayTable() {
 }
 
 function displayHistoryTable(history) {
-  for (var i = 1; i < document.getElementById("historyTable").rows.length; i++) {
-    document.getElementById("historyTable").deleteRow(i);
+  while(document.getElementById("historyTable").rows.length > 1) {
+    document.getElementById("historyTable").deleteRow(1);
   }
   var json = JSON.parse(history);
   for (var i=0; i < json.values.length;++i){  
@@ -213,5 +213,5 @@ function getDate() {
   if(mm<10){
       mm='0'+mm;
   } 
-  return dd+'/'+mm+'/'+yyyy;
+  return mm+'/'+dd+'/'+yyyy;
 }
