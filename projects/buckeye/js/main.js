@@ -130,12 +130,12 @@ function remember_workout() {
   var history=getCookie("history");
   if(history) {
     var json = JSON.parse(history);
-    json.values.push({"weight" : buckeye.max, "date" : new Date()});
+    json.values.push({"weight" : buckeye.max, "date" : getDate()});
     setCookie("history", JSON.stringify(json), 30);
   } else {
       var cookie = '{"values":[{' +
       '"weight":"' + buckeye.max + '",' +
-      '"date":"' + new Date() + '"}]}';
+      '"date":"' + getDate() + '"}]}';
       setCookie("history", cookie, 30);
   }
   checkCookie();
@@ -199,4 +199,19 @@ function checkCookie() {
     if (history != "") {
         displayHistoryTable(history);
     }
+}
+
+function getDate() {
+  var today = new Date();
+  var dd = today.getDate();
+  var mm = today.getMonth()+1; //January is 0!
+
+  var yyyy = today.getFullYear();
+  if(dd<10){
+      dd='0'+dd;
+  } 
+  if(mm<10){
+      mm='0'+mm;
+  } 
+  return dd+'/'+mm+'/'+yyyy;
 }
