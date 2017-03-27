@@ -128,12 +128,8 @@ function remember_workout() {
   var history=getCookie("history");
   if(history) {
     var json = JSON.parse(history);
-    json.values.push(newValue);
-  }
-  if(history != "") {
-    var json = JSON.parse(history);
-    var newJson = json.values.push({"weight" : buckeye.max, "date" : new Date()});
-    console.log("NEW COOKIE: " + JSON.stringify(newJson));
+    json.values.push({"weight" : buckeye.max, "date" : new Date()});
+    console.log("NEW COOKIE: " + JSON.stringify(json));
     setCookie("history", JSON.stringify(newJson), 30);
   } else {
       var cookie = '{"values":[{' +
