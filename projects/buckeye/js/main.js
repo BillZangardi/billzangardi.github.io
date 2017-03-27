@@ -1,6 +1,5 @@
 var dropdown;
 var tableShowing;
-const MAX = 0;
 
 var json = '{"values" : [' +
   '"180 90 105 120 135 150 165 120",' +
@@ -109,6 +108,43 @@ function displayTable() {
   }
 }
 
+function displayHistoryTable(history) {
+  console.log("displayHistoryTable" + history);
+  var json = JSON.parse(history);
+  for (var i=0; i < json.values.length;++i){  
+      var table = document.getElementById("historyTable");
+      var row = table.insertRow(i + 1);
+      var cell0 = row.insertCell(0);
+      var cell1 = row.insertCell(1);
+      cell0.innerHTML = json.values[i].weight;
+      cell1.innerHTML = json.values[i].date;
+  }
+  document.getElementById('historyRow').style.display = 'block';
+}
+
+function remember_workout() {
+  var index = dropdown.selectedIndex;
+  var buckeye = buckeyeObjects[index];
+  var history=getCookie("history");
+  if(history != "") {
+    var json = JSON.parse(history);
+    var newValue = '{' +
+      '"weight":"' + buckeye.max + '",' +
+      '"date":"' + new Date() + '"}'
+    var newJson = json.values.push(newValue);
+    console.log(JSON.stringify(newJson));
+    setCookie("history", JSON.stringify(newJson), 30);
+    checkCookie();
+  } else {
+      var cookie = '{"values":[{' +
+      '"weight":"' + buckeye.max + '",' +
+      '"date":"' + new Date() + '"}]}';
+      console.log(cookie);
+      setCookie("history", cookie, 30);
+      checkCookie();
+  }
+}
+
 window.onload = function() {
   dropdown = document.getElementById("selectNumber");
   for (var i=0; i < buckeyeObjects.length;++i){  
@@ -136,4 +172,35 @@ window.onload = function() {
       cell6.innerHTML = buckeye.weight6;
       cell7.innerHTML = buckeye.weight7;
   }
+  checkCookie();
+}
+
+function setCookie(cname,cvalue,exdays) {
+    var d = new Date();
+    d.setTime(d.getTime() + (exdays*24*60*60*1000));
+    var expires = "expires=" + d.toGMTString();
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+
+function getCookie(cname) {
+    var name = cname + "=";
+    var decodedCookie = decodeURIComponent(document.cookie);
+    var ca = decodedCookie.split(';');
+    for(var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+        }
+    }
+    return "";
+}
+
+function checkCookie() {
+    var history=getCookie("history");
+    if (history != "") {
+        displayHistoryTable(history);
+    }
 }

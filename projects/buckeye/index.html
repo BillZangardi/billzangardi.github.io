@@ -82,22 +82,40 @@
                 </div>
             </div>
         </div>
+
+        <div class="row" id="historyRow" style="display: none;">
+            <div class="col-lg-12 text-center">
+                <table class="table table-bordered" id="historyTable">
+                <thead>
+                  <tr>
+                    <th>MAX</th>
+                    <th>Date</th>
+                  </tr>
+                </thead>
+                </table>
+          </div>
+        </div>
         <!-- /.row -->
         <div class="row" id="personalRow" style="display: none;">
-          <table class="table table-bordered" id="myPersonalTable">
-            <thead>
-              <tr>
-                <th>MAX</th>
-                <th>8</th>
-                <th>6</th>
-                <th>4</th>
-                <th>3</th>
-                <th>2</th>
-                <th>1</th>
-                <th>4</th>
-              </tr>
-            </thead>
-          </table>
+            <div class="col-lg-12 text-center">
+                <table class="table table-bordered" id="myPersonalTable">
+                <thead>
+                  <tr>
+                    <th>MAX</th>
+                    <th>8</th>
+                    <th>6</th>
+                    <th>4</th>
+                    <th>3</th>
+                    <th>2</th>
+                    <th>1</th>
+                    <th>4</th>
+                  </tr>
+                </thead>
+                </table>
+
+                <button id="remember_workout" type="button" class="btn btn-default" onclick="remember_workout()">Remember Workout</button>
+                <p></p>
+          </div>
         </div>
 
         <div class="row">
