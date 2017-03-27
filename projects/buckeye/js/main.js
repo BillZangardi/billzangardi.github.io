@@ -130,9 +130,9 @@ function remember_workout() {
     var json = JSON.parse(history);
     var newValue = '{' +
       '"weight":"' + buckeye.max + '",' +
-      '"date":"' + new Date() + '"}'
+      '"date":"' + new Date() + '"}';
     var newJson = json.values.push(newValue);
-    console.log(JSON.stringify(newJson));
+    console.log("NEW COOKIE: " + JSON.stringify(newJson));
     setCookie("history", JSON.stringify(newJson), 30);
     checkCookie();
   } else {
