@@ -118,7 +118,7 @@ function displayHistoryTable(history) {
       var row = table.insertRow(i + 1);
       var cell0 = row.insertCell(0);
       var cell1 = row.insertCell(1);
-      var cell1 = row.insertCell(2);
+      var cell2 = row.insertCell(2);
       cell0.innerHTML = json.values[i].weight;
       cell1.innerHTML = json.values[i].workout;
       cell2.innerHTML = json.values[i].date;
