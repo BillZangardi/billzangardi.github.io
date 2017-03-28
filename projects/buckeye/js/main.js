@@ -118,8 +118,10 @@ function displayHistoryTable(history) {
       var row = table.insertRow(i + 1);
       var cell0 = row.insertCell(0);
       var cell1 = row.insertCell(1);
+      var cell1 = row.insertCell(2);
       cell0.innerHTML = json.values[i].weight;
-      cell1.innerHTML = json.values[i].date;
+      cell1.innerHTML = json.values[i].workout;
+      cell2.innerHTML = json.values[i].date;
   }
   document.getElementById('historyRow').style.display = 'block';
 }
@@ -128,14 +130,16 @@ function remember_workout() {
   var index = dropdown.selectedIndex;
   var buckeye = buckeyeObjects[index];
   var history=getCookie("history");
+  var workout = prompt("Please enter type of workout: (Bench, Squat, etc.)", "");
   if(history) {
     var json = JSON.parse(history);
-    json.values.push({"weight" : buckeye.max, "date" : getDate()});
+    json.values.push({"weight" : buckeye.max, "date" : getDate(), "workout" : workout});
     setCookie("history", JSON.stringify(json), 30);
   } else {
       var cookie = '{"values":[{' +
       '"weight":"' + buckeye.max + '",' +
-      '"date":"' + getDate() + '"}]}';
+      '"date":"' + getDate() + '",' + 
+      '"workout":"' + workout + '"}]}';
       setCookie("history", cookie, 30);
   }
   checkCookie();
