@@ -186,7 +186,6 @@ window.onload = function() {
       cell7.innerHTML = buckeye.weight7;
   }
   checkCookie();
-  displayHistoryTable('{"values":[{"weight":"255","date":"03/27/2017"}]}');
 }
 
 function setCookie(cname,cvalue,exdays) {
