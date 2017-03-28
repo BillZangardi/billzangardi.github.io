@@ -113,19 +113,23 @@ function displayHistoryTable(history) {
     document.getElementById("historyTable").deleteRow(1);
   }
   var json = JSON.parse(history);
-  for (var i=0; i < json.values.length;++i){  
-      var table = document.getElementById("historyTable");
-      var row = table.insertRow(i + 1);
-      var cell0 = row.insertCell(0);
-      var cell1 = row.insertCell(1);
-      var cell2 = row.insertCell(2);
-      var cell3 = row.insertCell(3);
-      cell0.innerHTML = json.values[i].weight;
-      cell1.innerHTML = json.values[i].workout;
-      cell2.innerHTML = json.values[i].date;
-      cell3.innerHTML = "<button type=\"button\" class=\"close\" data-dismiss=\"alert\" onClick=\"deleteHistory(" + i + ")\"><span>×</span></button>";
+  if(json.values.length > 0) {
+    for (var i=0; i < json.values.length;++i){  
+        var table = document.getElementById("historyTable");
+        var row = table.insertRow(i + 1);
+        var cell0 = row.insertCell(0);
+        var cell1 = row.insertCell(1);
+        var cell2 = row.insertCell(2);
+        var cell3 = row.insertCell(3);
+        cell0.innerHTML = json.values[i].weight;
+        cell1.innerHTML = json.values[i].workout;
+        cell2.innerHTML = json.values[i].date;
+        cell3.innerHTML = "<button type=\"button\" class=\"close\" data-dismiss=\"alert\" onClick=\"deleteHistory(" + i + ")\"><span>×</span></button>";
+    }
+    document.getElementById('historyRow').style.display = 'block';
+  } else {
+    document.getElementById('historyRow').style.display = 'none';
   }
-  document.getElementById('historyRow').style.display = 'block';
 }
 
 function remember_workout() {
@@ -214,9 +218,7 @@ function getCookie(cname) {
 
 function checkCookie() {
     var history=getCookie("history");
-    if (history != "") {
-        displayHistoryTable(history);
-    }
+    displayHistoryTable(history);
 }
 
 function getDate() {
