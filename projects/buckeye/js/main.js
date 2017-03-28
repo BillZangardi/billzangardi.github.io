@@ -119,9 +119,11 @@ function displayHistoryTable(history) {
       var cell0 = row.insertCell(0);
       var cell1 = row.insertCell(1);
       var cell2 = row.insertCell(2);
+      var cell3 = row.insertCell(3);
       cell0.innerHTML = json.values[i].weight;
       cell1.innerHTML = json.values[i].workout;
       cell2.innerHTML = json.values[i].date;
+      cell3.innerHTML = "<button type=\"button\" class=\"close\" data-dismiss=\"alert\" onClick=\"deleteHistory(" + i + ")\"><span>×</span></button>";
   }
   document.getElementById('historyRow').style.display = 'block';
 }
@@ -143,6 +145,17 @@ function remember_workout() {
       setCookie("history", cookie, 30);
   }
   checkCookie();
+}
+
+function deleteHistory(position) {
+  if(confirm("Are you sure you want to delete this item?")) {
+    var history=getCookie("history");
+    if(history) {
+      var json = JSON.parse(history);
+      json.values.splice(position, 1);
+      setCookie("history", JSON.stringify(json), 30);
+    }
+  }
 }
 
 window.onload = function() {
@@ -173,6 +186,7 @@ window.onload = function() {
       cell7.innerHTML = buckeye.weight7;
   }
   checkCookie();
+  displayHistoryTable('{"values":[{"weight":"255","date":"03/27/2017"}]}');
 }
 
 function setCookie(cname,cvalue,exdays) {
