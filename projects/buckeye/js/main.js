@@ -154,6 +154,7 @@ function deleteHistory(position) {
       var json = JSON.parse(history);
       json.values.splice(position, 1);
       setCookie("history", JSON.stringify(json), 30);
+      checkCookie();
     }
   }
 }
