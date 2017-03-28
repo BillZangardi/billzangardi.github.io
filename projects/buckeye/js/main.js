@@ -137,16 +137,18 @@ function remember_workout() {
   var buckeye = buckeyeObjects[index];
   var history=getCookie("history");
   var workout = prompt("Please enter type of workout: (Bench, Squat, etc.)", "");
-  if(history) {
-    var json = JSON.parse(history);
-    json.values.push({"weight" : buckeye.max, "date" : getDate(), "workout" : workout});
-    setCookie("history", JSON.stringify(json), 30);
-  } else {
-      var cookie = '{"values":[{' +
-      '"weight":"' + buckeye.max + '",' +
-      '"date":"' + getDate() + '",' + 
-      '"workout":"' + workout + '"}]}';
-      setCookie("history", cookie, 30);
+  if (workout != "") {
+    if(history) {
+      var json = JSON.parse(history);
+      json.values.push({"weight" : buckeye.max, "date" : getDate(), "workout" : workout});
+      setCookie("history", JSON.stringify(json), 30);
+    } else {
+        var cookie = '{"values":[{' +
+        '"weight":"' + buckeye.max + '",' +
+        '"date":"' + getDate() + '",' + 
+        '"workout":"' + workout + '"}]}';
+        setCookie("history", cookie, 30);
+    }
   }
   checkCookie();
 }
