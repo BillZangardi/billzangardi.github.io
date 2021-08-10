@@ -2,15 +2,15 @@
 Hi, I'm Bill Zangardi.
 <p>I majored in Information Science and Technology (IS&T) at Temple University, and graduated in May 2015.</p>
 <h5>WORK</h5>
-<p>ndroid Software Engineer<br/>
+<p>Senior Android Software Engineer<br/>
 	Freedompay, Inc. <br/>
 </p>
 <p>FEBRUARY 2018 - CURRENT
 <p>
-	• Developed Android and Java libraries used by third party POS (Point-of-Sale) developers to incorporate uses of credit card terminals and processing of payments on the FreedomPay P2PE network within their applications. (AFCC - Android Freeway Commerce Connect)<br/>
-	• Developed Android libraries that would communicate with specific credit card terminals to be used along with the AFCC. Libraries included Ingencio RBA and Tetra devices where we supported USB, Bluetooth, and IP Socket communications using a byte level protocol. Ingenico ROAM devices support using Ingenico provided Android libraries for communication.<br/>
-	• Designed, developed, and maintained a CI/CD pipeline that would generate and distribute Android and Java libraries (.aar/.jar) on a private Maven repository for seamless integration for integrators consuming our libraries.<br/>
-	• Worked closely with companies such as Ingenico, Apple, and Google to design features around Apple Pay, Google Pay, Apple VAS, and Google Smart Tap to support payments and loyalty programs for mobile and digital credit card terminal next generation interactions.<br/>
+	•	Developed Android and Java libraries used by third party POS (Point-of-Sale) developers to incorporate uses of credit card terminals and processing of payments on the FreedomPay P2PE network within their applications. (AFCC - Android Freeway Commerce Connect)<br/>
+	•	Developed Android libraries that would communicate with specific credit card terminals to be used along with the AFCC. Libraries included Ingencio RBA and Tetra devices where we supported USB, Bluetooth, and IP Socket communications using a byte level protocol. Ingenico ROAM devices support using Ingenico provided Android libraries for communication.<br/>
+	•	Designed, developed, and maintained a CI/CD pipeline that would generate and distribute Android and Java libraries (.aar/.jar) on a private Maven repository for seamless integration for integrators consuming our libraries.<br/>
+	•	Worked closely with companies such as Ingenico, Apple, and Google to design features around Apple Pay, Google Pay, Apple VAS, and Google Smart Tap to support payments and loyalty programs for mobile and digital credit card terminal next generation interactions.<br/>
 </p>
 <p>Software Engineer - Android<br/>
 	Elsevier Inc. <br/>
